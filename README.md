@@ -1,4 +1,4 @@
-# CIE-Session 2
+# CIE-Session-2
 Dashboard App and Counting App running in Local IP.
 
 GitHub
