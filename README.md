@@ -1,8 +1,8 @@
 # CIE-Program 2
-Dashboard App and Counting App run in Local.
+Dashboard App and Counting App running in Local IP.
 
 GitHub
-Releases · hashicorp/demo-consul-101
+[Releases · hashicorp/demo-consul-101](https://github.com/hashicorp/demo-consul-101/releases)
 
 Git Bash
 PORT=9999 ./dashboard-service
