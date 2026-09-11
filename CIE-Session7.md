@@ -2,28 +2,34 @@ Verfication 1(Set up SystemD)
 
 Verfication 2(Create Specific User[jump-host-user,dashboard-user,counting-user])
 
-![image.png](attachment:7343a1e7-ff2a-4df6-a131-3c0e53902ced:image.png)
+<img width="648" height="414" alt="image" src="https://github.com/user-attachments/assets/d811121b-1249-4666-b3d8-86a83ee14d87" />
 
-![image.png](attachment:75428063-f16e-4291-80e2-8ac4032a3bae:image.png)
+
+<img width="814" height="272" alt="image" src="https://github.com/user-attachments/assets/6f6c6450-d50b-417d-aa62-dbe583cc40de" />
+
 
 Set dashboard-user for Dashboard-EC2
 
-![image.png](attachment:ac651c5c-5232-4ff1-9e1e-28eac00dbcc9:image.png)
+<img width="1336" height="625" alt="image" src="https://github.com/user-attachments/assets/ad5bfdb7-5e85-4971-8e44-e062d09bcb34" />
+
 
 Set counting-user for Counting-EC2
 
-![image.png](attachment:c307b6b8-17ca-4999-9cb6-ab0b7a0dbab4:image.png)
+<img width="1503" height="771" alt="image" src="https://github.com/user-attachments/assets/6f7d1334-87fc-47b8-9b23-7f9d3697a5e3" />
+
 
 Change dashboard-user and counting-user
 
-![image.png](attachment:53195dc3-8e6c-4cec-b9de-a3d9b512e064:image.png)
+<img width="1464" height="63" alt="image" src="https://github.com/user-attachments/assets/d73e70ec-4aa6-4e1d-8b79-7099fc248261" />
 
 
 Verfication 3(ELB : LoadBalancer to Recover Single Point of Failure)
 
-![image.png](attachment:63682fdf-3671-4e41-93a0-ac7fe33b81fe:image.png)
+<img width="2352" height="1821" alt="image" src="https://github.com/user-attachments/assets/077620f2-461d-450a-b4c5-328fd19d6706" />
 
-![image.png](attachment:1765b1ef-70fb-41af-8982-00f28c300507:image.png)
+
+<img width="832" height="684" alt="image" src="https://github.com/user-attachments/assets/4df60458-db7b-4fab-bbc3-a0209da337f9" />
+
 
 
 Set Permission
@@ -32,24 +38,20 @@ chmod 400 Dashboard-EC2-Key.pem
 
 chmod 400 Counting-EC2-Key.pem
 
-![image.png](attachment:1ffe4378-e7bb-4693-b404-2e962096ef91:image.png)
+<img width="632" height="290" alt="image" src="https://github.com/user-attachments/assets/ed6e8d32-bc8b-4270-9946-74f4909a5a53" />
+
 
 
 
 Install and unzip App
 
-![image.png](attachment:fd8a1bf1-66fa-43b3-b961-3f59a71139e6:image.png)
-
-![image.png](attachment:002ee934-a7a0-4978-9403-b88656c9869f:image.png)
-
-![image.png](attachment:5ca9822e-db55-458f-8ec2-7fa182704a71:image.png)
-
-
+<img width="1530" height="645" alt="image" src="https://github.com/user-attachments/assets/1ce5d4e2-c4d1-4ead-9c60-92e128c9cef9" />
+<img width="690" height="648" alt="image" src="https://github.com/user-attachments/assets/833b79f2-d408-425f-84b7-a5645fe18a33" />
+<img width="855" height="621" alt="image" src="https://github.com/user-attachments/assets/2758b396-a322-47ed-8f32-012be63cd5b0" />
 
 Unhealthy ⇒ Healthy
+<img width="843" height="621" alt="image" src="https://github.com/user-attachments/assets/7f427a42-6db2-4e4b-9502-fbc15837c460" />
 
-![image.png](attachment:640617cd-3663-4856-81bb-eed950c7c5a6:image.png)
+<img width="1588" height="591" alt="image" src="https://github.com/user-attachments/assets/b28e4fcb-176d-42c4-b648-ebb1289eced4" />
+<img width="1588" height="504" alt="image" src="https://github.com/user-attachments/assets/042aaa11-d53d-49b5-b4c9-96aef3c8beb7" />
 
-![image.png](attachment:4ba5e96a-ca56-4247-a416-c8495a5c6ae9:image.png)
-
-![image.png](attachment:dd8f4e60-4784-4985-9adb-80f585eda554:image.png)
