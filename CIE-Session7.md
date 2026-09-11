@@ -55,3 +55,51 @@ Unhealthy ⇒ Healthy
 <img width="1588" height="591" alt="image" src="https://github.com/user-attachments/assets/b28e4fcb-176d-42c4-b648-ebb1289eced4" />
 <img width="1588" height="504" alt="image" src="https://github.com/user-attachments/assets/042aaa11-d53d-49b5-b4c9-96aef3c8beb7" />
 
+Verfication 4(Load Test)
+
+dashboard-load-test.js
+import http from 'k6/http';
+import { check } from 'k6';
+
+const BASE_URL =
+  __ENV.BASE_URL ||
+  'http://Dashboard-LB-2044222564.ap-northeast-1.elb.amazonaws.com';
+
+const RATE = Number(__ENV.RATE || 1000);
+const DURATION = __ENV.DURATION || '60s';
+
+export const options = {
+  discardResponseBodies: true,
+
+  scenarios: {
+    dashboard_traffic: {
+      executor: 'constant-arrival-rate',
+      rate: RATE,
+      timeUnit: '1s',
+      duration: DURATION,
+      preAllocatedVUs: 300,
+      maxVUs: 1000,
+      gracefulStop: '10s',
+    },
+  },
+
+  thresholds: {
+    http_req_failed: ['rate<0.01'],
+    http_req_duration: ['p(95)<1000'],
+    checks: ['rate>0.99'],
+  },
+};
+
+export default function () {
+  const response = http.get(`${BASE_URL}/`, {
+    tags: {
+      endpoint: 'dashboard-home',
+    },
+  });
+
+  check(response, {
+    'status is 200': (r) => r.status === 200,
+  });
+}
+
+<img width="2695" height="1716" alt="image" src="https://github.com/user-attachments/assets/6fb5b958-daa1-4d63-8c71-d459179be6d6" />
